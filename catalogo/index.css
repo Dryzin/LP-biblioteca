@@ -58,7 +58,7 @@ body {
   padding: 8rem 2rem 4rem;
   overflow: hidden;
   background: linear-gradient(to bottom, hsl(var(--background)), hsl(var(--card)));
-  background-image: url(assets/image.jpg);
+  background-image: url(assets/banner_catalogo.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -111,6 +111,7 @@ body {
 .hero a svg{
   width: 10px;
   height: auto;
+  fill: hsl(var(--primary));
 }
 
 .hero h1 {
