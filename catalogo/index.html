@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca Digital</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <section class="hero">
+    <a href="https://bibliotecamunicipaldemachado.vercel.app"><span id="button-backpage">Voltar</span><svg version="1.1" id="fi_271226" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve"><g>	<g>		<path d="M484.14,226.886L306.46,49.202c-5.072-5.072-11.832-7.856-19.04-7.856c-7.216,0-13.972,2.788-19.044,7.856l-16.132,16.136			c-5.068,5.064-7.86,11.828-7.86,19.04c0,7.208,2.792,14.2,7.86,19.264L355.9,207.526H26.58C11.732,207.526,0,219.15,0,234.002			v22.812c0,14.852,11.732,27.648,26.58,27.648h330.496L252.248,388.926c-5.068,5.072-7.86,11.652-7.86,18.864			c0,7.204,2.792,13.88,7.86,18.948l16.132,16.084c5.072,5.072,11.828,7.836,19.044,7.836c7.208,0,13.968-2.8,19.04-7.872			l177.68-177.68c5.084-5.088,7.88-11.88,7.86-19.1C492.02,238.762,489.228,231.966,484.14,226.886z"></path>	</g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></a>
+    <div class="hero-content">
+    </div>
+  </section>
+
+  <section class="search-section">
+    <div class="search-container">
+      <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <path d="m21 21-4.35-4.35"></path>
+      </svg>
+      <input type="text" class="search-input" placeholder="Pesquisar livros, autores ou categorias..." id="searchInput">
+    </div>
+
+    <div class="filters">
+      <button class="filter-btn active" data-category="todos">Todos</button>
+      <button class="filter-btn" data-category="Ficção">Ficção</button>
+      <button class="filter-btn" data-category="Tecnologia">Tecnologia</button>
+      <button class="filter-btn" data-category="Filosofia">Filosofia</button>
+      <button class="filter-btn" data-category="Biografia">Biografia</button>
+      <button class="filter-btn" data-category="Ciência">Ciência</button>
+      <button class="filter-btn" data-category="Drama">Drama</button>
+    </div>
+  </section>
+
+  <section class="books">
+    <div class="container">
+      <div class="books-header">
+        <h2>Acervo Disponível</h2>
+        <p>Explore nossa coleção de livros cuidadosamente organizados por categoria e disponibilidade.</p>
+        <div class="grid-line">
+          <svg id="btnLista" class="grid-inline active" xmlns="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg" id="fi_3603323"><path d="m23 0h-22c-.552 0-1 .448-1 1v4c0 .552.448 1 1 1h22c.552 0 1-.448 1-1v-4c0-.552-.448-1-1-1z"></path><path d="m23 9h-22c-.552 0-1 .448-1 1v4c0 .552.448 1 1 1h22c.552 0 1-.448 1-1v-4c0-.552-.448-1-1-1z"></path><path d="m23 18h-22c-.552 0-1 .448-1 1v4c0 .552.448 1 1 1h22c.552 0 1-.448 1-1v-4c0-.552-.448-1-1-1z"></path></svg>
+          <svg id="btnGrade" class="grid-block" enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg" id="fi_3603075"><path d="m6 0h-5c-.552 0-1 .448-1 1v5c0 .552.448 1 1 1h5c.552 0 1-.448 1-1v-5c0-.552-.448-1-1-1z"></path><path d="m6 8.5h-5c-.552 0-1 .448-1 1v5c0 .552.448 1 1 1h5c.552 0 1-.448 1-1v-5c0-.552-.448-1-1-1z"></path><path d="m15.5 14.5v-5c0-.552-.448-1-1-1h-5c-.552 0-1 .448-1 1v5c0 .552.448 1 1 1h5c.552 0 1-.448 1-1z"></path><path d="m15.5 6v-5c0-.552-.448-1-1-1h-5c-.552 0-1 .448-1 1v5c0 .552.448 1 1 1h5c.552 0 1-.448 1-1z"></path><path d="m23 0h-5c-.552 0-1 .448-1 1v5c0 .552.448 1 1 1h5c.552 0 1-.448 1-1v-5c0-.552-.448-1-1-1z"></path><path d="m18 15.5h5c.552 0 1-.448 1-1v-5c0-.552-.448-1-1-1h-5c-.552 0-1 .448-1 1v5c0 .552.448 1 1 1z"></path><path d="m18 24h5c.552 0 1-.448 1-1v-5c0-.552-.448-1-1-1h-5c-.552 0-1 .448-1 1v5c0 .552.448 1 1 1z"></path><path d="m0 18v5c0 .552.448 1 1 1h5c.552 0 1-.448 1-1v-5c0-.552-.448-1-1-1h-5c-.552 0-1 .448-1 1z"></path><path d="m8.5 18v5c0 .552.448 1 1 1h5c.552 0 1-.448 1-1v-5c0-.552-.448-1-1-1h-5c-.552 0-1 .448-1 1z"></path></svg>
+        </div>
+      </div>
+
+      <div class="books-grid inline-book" id="booksGrid">
+        <!-- Os livros serão inseridos aqui pelo JavaScript -->
+        <div class="book-card">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <div class="modal-header">
+        <button class="modal-close" id="modalClose">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+
+        <div class="modal-book-info">
+          <div class="modal-cover" id="modalCover"></div>
+          <div class="modal-details">
+            <h2 id="modalTitle"></h2>
+            <p class="modal-author" id="modalAuthor"></p>
+            <span class="modal-category" id="modalCategory"></span>
+          </div>
+        </div>
+      </div>
+      <div class="modal-content">
+        <p class="modal-description" id="modalDescription"></p>
+
+        <div class="modal-meta">
+          <div class="meta-item">
+            <div class="meta-value" id="modalPages"></div>
+            <div class="meta-label">Páginas</div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-value" id="modalYear"></div>
+            <div class="meta-label">Ano</div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-value" id="modalLanguage"></div>
+            <div class="meta-label">Idioma</div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-value" id="modalStatus"></div>
+            <div class="meta-label">Status</div>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button class="btn btn-primary" id="reserveBtn">Reservar Livro</button>
+          <button class="btn btn-secondary" id="favoriteBtn">Adicionar aos Favoritos</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--<script type="module" src="index.js"></script>-->
+  <script type="module" src="index.js"></script>
+
+</body>
+
+</html>

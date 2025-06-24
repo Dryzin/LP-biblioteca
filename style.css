@@ -62,17 +62,18 @@ header{
 
 header .list-items{
     display: flex;
-    max-width: 360px;
+    max-width: 80%;
+    flex: 2;
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    gap: 20px;
+    gap: 2rem;
 }
 
 .logo_header{
     display: flex;
     align-items: center;
-    max-width: 140px;
+    flex: 1;
 }   
 .list-items li a{
     color: #fff;
