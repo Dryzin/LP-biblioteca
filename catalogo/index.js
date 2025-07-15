@@ -93,6 +93,12 @@ async function carregarPagina(page) {
   livrosFiltrados = [...livros];
 
   renderizarLivros();
+
+    const categoriasUnicas = [
+    ...new Set(livros.map(l => l.categoria).filter(Boolean))
+  ].sort();
+
+  gerarBotoesFiltro(categoriasUnicas);
 }
 
 // =================== RENDERIZAÇÃO ===================
@@ -125,6 +131,31 @@ function renderizarLivros(lista = livrosFiltrados) {
     gridLivros.appendChild(card);
   });
 }
+
+function gerarBotoesFiltro(categorias) {
+  const containerFiltros = document.querySelector('.filters');
+  containerFiltros.innerHTML = `
+    <button class="filter-btn active" data-category="todos">Todos</button>
+  `;
+
+  categorias.forEach(cat => {
+    const btn = document.createElement('button');
+    btn.className = 'filter-btn';
+    btn.dataset.category = cat;
+    btn.textContent = cat;
+    containerFiltros.appendChild(btn);
+  });
+
+  const botoesFiltro = document.querySelectorAll('.filter-btn');
+  botoesFiltro.forEach(botao => {
+    botao.addEventListener('click', () => {
+      botoesFiltro.forEach(btn => btn.classList.remove('active'));
+      botao.classList.add('active');
+      filtrarPorCategoria(botao.dataset.category);
+    });
+  });
+}
+
 
 // =================== FILTRO ===================
 function filtrarPorCategoria(categoria) {
